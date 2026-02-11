@@ -14,22 +14,22 @@ const WhyUsCard = ({ service }) => {
     <div
       onMouseMove={handleMouseMove}
       className="
-        group relative min-w-[280px] w-[280px] h-[250px]
+        group relative min-w-[280px] w-[280px] h-[260px]
         rounded-2xl overflow-hidden
         bg-white dark:bg-[#1b120b]
         border border-orange-200/60 dark:border-orange-700/40
         shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]
-        transition-transform duration-500
-        hover:-translate-y-2
+        transition-all duration-500
+        hover:-translate-y-2 hover:shadow-[0_25px_50px_-12px_rgba(255,111,0,0.35)]
       "
     >
-      {/* Cursor glow */}
+      {/* Cursor Glow Effect */}
       <div
         className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500"
         style={{
           background: `radial-gradient(
             600px circle at ${pos.x}% ${pos.y}%,
-            rgba(255,111,0,0.15),
+            rgba(255,111,0,0.12),
             transparent 40%
           )`,
         }}
@@ -43,16 +43,13 @@ const WhyUsCard = ({ service }) => {
         </h3>
 
         {/* Divider */}
-        <div className="mt-3 h-px w-12 bg-orange-500/60 rounded-full" />
+        <div className="mt-3 h-px w-12 bg-orange-500/70 rounded-full" />
 
-        {/* Description */}
+        {/* Description — ALWAYS VISIBLE NOW */}
         <p
           className="
             mt-6 text-sm leading-relaxed
-            text-gray-700 dark:text-white
-            opacity-10 translate-y-3
-            group-hover:opacity-100 group-hover:translate-y-0
-            transition-all duration-500
+            text-gray-700 dark:text-orange-200
           "
         >
           {service.description}
@@ -63,3 +60,5 @@ const WhyUsCard = ({ service }) => {
 };
 
 export default WhyUsCard;
+git add .
+git commit -m "Updated UI and features"
