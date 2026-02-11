@@ -60,5 +60,3 @@ const WhyUsCard = ({ service }) => {
 };
 
 export default WhyUsCard;
-git add .
-git commit -m "Updated UI and features"
